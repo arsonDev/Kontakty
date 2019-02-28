@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="number" type="String">aa</variable>
+        <variable name="nazwaKon" type="String">Test</variable>
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+                                                       android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView android:layout_width="wrap_content"
+                                                      android:layout_height="wrap_content"
+                                                      tools:ignore="MissingConstraints"
+                                                      android:src="@mipmap/ic_launcher" android:layout_marginTop="8dp"
+                                                      app:layout_constraintTop_toTopOf="parent"
+                                                      app:layout_constraintStart_toStartOf="parent"
+                                                      android:layout_marginStart="8dp"
+                                                      android:id="@+id/appCompatImageView"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                                                     android:layout_height="wrap_content"
+                                                     android:textSize="22sp"
+                                                     android:text="@{nazwaKon}"
+                                                     android:textColor="#000"
+                                                     app:layout_constraintStart_toEndOf="@+id/appCompatImageView"
+                                                     android:layout_marginStart="8dp" android:layout_marginTop="8dp"
+                                                     app:layout_constraintTop_toTopOf="parent"
+                                                     android:id="@+id/nazwa" android:layout_marginEnd="8dp"
+                                                     app:layout_constraintEnd_toStartOf="@+id/appCompatImageView2"/>
+
+        <androidx.appcompat.widget.AppCompatTextView android:layout_width="0dp"
+                                                     android:layout_height="wrap_content"
+                                                     android:text="@{number}"
+                                                     android:textSize="18sp"
+                                                     android:textColor="#222"
+                                                     app:layout_constraintStart_toEndOf="@+id/appCompatImageView"
+                                                     android:layout_marginStart="8dp"
+                                                     android:id="@+id/numer"
+                                                     android:layout_marginTop="8dp"
+                                                     app:layout_constraintTop_toBottomOf="@+id/nazwa"
+                                                     android:layout_marginEnd="8dp"
+                                                     app:layout_constraintEnd_toStartOf="@+id/appCompatImageView2"/>
+        <androidx.appcompat.widget.AppCompatImageView android:layout_width="50dp"
+                                                      android:layout_height="50dp"
+                                                      android:tint="#505050"
+                                                      app:layout_constraintEnd_toEndOf="parent"
+                                                      android:layout_marginEnd="8dp"
+                                                      app:layout_constraintBottom_toBottomOf="@+id/appCompatImageView"
+                                                      android:layout_marginTop="8dp"
+                                                      app:layout_constraintTop_toTopOf="@+id/appCompatImageView"
+                                                      app:srcCompat="@android:drawable/stat_sys_phone_call"
+                                                      android:id="@+id/appCompatImageView2"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
