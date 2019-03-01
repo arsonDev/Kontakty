@@ -1,4 +1,4 @@
 package pl.azako.kontakty.models
 
-class Contact {
+data class Contact(val _id : Int,val name : String,var number : String,val hasNumber : Int) {
 }
